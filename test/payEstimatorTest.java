@@ -13,7 +13,7 @@ public class payEstimatorTest {
 
         payEstimator totalFee = new payEstimator();
 
-        assertEquals(12.00, totalFee.estimatePay(5, "pm", 6, "pm"), .001);
+        assertEquals(12.00, totalFee.estimatePay(5,6), .001);
 
 
 
