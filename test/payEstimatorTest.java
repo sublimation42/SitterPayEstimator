@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Adam on 1/13/2017.
+ * Created by Adam Howard on 1/13/2017.
  */
 
 public class payEstimatorTest {
@@ -13,7 +13,7 @@ public class payEstimatorTest {
 
         payEstimator totalFee = new payEstimator();
 
-        assertEquals(12.00, totalFee.estimatePay(1700, 1800), .001);
+        assertEquals(12.00, totalFee.estimatePay(5, "pm", 6, "pm"), .001);
 
 
 
