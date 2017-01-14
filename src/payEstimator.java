@@ -2,26 +2,62 @@
  * Created by Adam Howard on 1/13/2017.
  */
 public class payEstimator {
-    public static Double estimatePay(Integer startTime, Integer endTime)
+
+
+
+    public static final Double normalRate = 12.00;
+    public static final Double bedtimeRate = 8.00;
+    public static final Double latenightRate = 16.00;
+
+    public static Double estimatePay(Integer startTime, Integer bedTime, Integer endTime)
     {
-        Double rate = 0.00;
+        Double totalBill = 0.00;
+        Integer totalTime = 0;
+        Integer normalHours = 0;
+        Integer bedtimeHours = 0;
+        Integer latenightHours = 0;
+
+        if (endTime <= 4)
+        {
+            endTime = endTime + 12;
+        }
 
         /* determine rate */
-        if (startTime >= 5 && startTime <8)
+        if (endTime < bedTime)
         {
-            rate = 12.00;
+            normalHours = endTime - startTime;
+            totalBill = normalHours * normalRate;
+
         }
-        else if (startTime >= 8 && startTime <12)
+        else
         {
-            rate = 8.00;
-        }
-        else if (startTime >= 12 || startTime < 4)
-        {
-            rate = 16.00;
+            if (startTime < 12)
+            {
+                normalHours = bedTime - startTime;
+            }
+            if (endTime >= 12)
+            {
+                latenightHours = endTime - 12;
+                if (startTime < 12)
+                {
+                    bedtimeHours = 12 - bedTime;
+                }
+
+            }
+            else
+            {
+                bedtimeHours =  endTime - bedTime;
+            }
+
+
+            totalBill = normalHours * normalRate + bedtimeHours * bedtimeRate + latenightHours * latenightRate;
         }
 
-        return rate;
+
+
+        return totalBill;
     }
 
-    /* calualte hours */
+
+
 }
