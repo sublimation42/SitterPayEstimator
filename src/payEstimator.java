@@ -12,7 +12,6 @@ public class payEstimator {
     public static Double estimatePay(Integer startTime, Integer bedTime, Integer endTime)
     {
         Double totalBill = 0.00;
-        Integer totalTime = 0;
         Integer normalHours = 0;
         Integer bedtimeHours = 0;
         Integer latenightHours = 0;
