@@ -11,7 +11,9 @@ public class sitterSimTest {
 
         sitterSim aSitter = new sitterSim();
 
-       assertEquals("Sorry, sitting hours are limited to between 5:00 PM to 4:00 AM.", aSitter.scheduleAppt(4, 10, 2));
+       assertEquals("Sorry, sitting hours are limited to between 5:00 PM to 4:00 AM.", aSitter.scheduleAppt(4, "pm",  10, 2, "am"));
+
+
 
 
 
