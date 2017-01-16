@@ -7,13 +7,26 @@ public class sitterSim {
 
         payEstimator totalFee = new payEstimator();
 
-        if ((startTime < 5 && stPeriod.equalsIgnoreCase("pm")) ||
-                ( endTime > 4 && etPeriod.equalsIgnoreCase("am")))
+
+        if(startTime < 5 && stPeriod.equalsIgnoreCase("pm"))
         {
             return "Sorry, sitting hours are limited to between 5:00 PM to 4:00 AM.";
         }
+
+        if((endTime > 4 && endTime <12) && etPeriod.equalsIgnoreCase("am"))
+        {
+            return "Sorry, sitting hours are limited to between 5:00 PM to 4:00 AM.";
+        }
+
+        if((startTime >= 4 && startTime <12) && stPeriod.equalsIgnoreCase("am"))
+        {
+            return "Sorry, sitting hours are limited to between 5:00 PM to 4:00 AM.";
+        }
+
+
         return "Sitting appointment complete, your pay is: $" +
-                totalFee.estimatePay(startTime, bedTime, endTime);
+               String.format("%.2f", totalFee.estimatePay(startTime, bedTime, endTime)) + ".";
+
 
 
 

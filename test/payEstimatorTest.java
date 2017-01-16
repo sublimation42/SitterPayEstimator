@@ -27,7 +27,7 @@ public class payEstimatorTest {
         //testing varied hours and rates.
         assertEquals(64.00, totalFee.estimatePay(7,9, 1), .001);
 
-        /* Testing accurate rate and hours worked */
+
 
 
 
