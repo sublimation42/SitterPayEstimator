@@ -1,4 +1,9 @@
 /**
+ * sitter sim class
+ * simulates a babysitter by taking in a requested appointment time
+ * obeying restrictions of no appt time between 4:00 AM and 5:00 PM
+ * returns error or success based on times entered and the total fee for the appointment
+ *
  * Created by Adam Howard on 1/14/2017.
  */
 public class sitterSim {

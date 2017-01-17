@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 /**
+ * sitter interface class
+ * provides an interface and main to run the sitter sim program
  * Created by Adam Howard on 1/16/2017.
  */
 public class sitterInterface {
 
     public static void main(String[] args) {
-        String welcome = "Pleae enter the start tme, bed time, and end time in the form:\n" +
+        String welcome = "Pleae enter the start time, bed time, and end time in the form:\n" +
                 "start:am/pm:bedtime:end:am/pm example 5:pm:8:11:pm.\n";
 
 

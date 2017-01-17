@@ -1,4 +1,8 @@
 /**
+ * Pay estimator class
+ * Calculates babysitter nightly fee based on varied rates
+ * returns total fee for the appointment
+ *
  * Created by Adam Howard on 1/13/2017.
  */
 public class payEstimator {

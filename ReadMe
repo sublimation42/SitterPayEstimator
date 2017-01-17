@@ -1,4 +1,33 @@
 PROJECT TITLE: Simple Sitter Pay Calculator
-PURPOSE OF PROJECT: Kata Completion, should calulate sitter pay using vraiable rates
+PURPOSE OF PROJECT: Babysitter Kata Completion: calculates sitter pay using variable rates
 VERSION or DATE: 01/13/2017
 AUTHORS: Adam Howard
+
+A .jar file has been included in the root of the repository for convenience and can should be executed via command line:
+    java -jar sitterInterface.jar
+
+To freshly compile classes or build a new jar:
+
+Copy the babySitterKata folder from the repository.
+
+From the command line inside the babySitterKata\source directory issue command:
+    javac -d ../classes *.java
+
+Next, change to the babySitterKata\classes directory and issue command:
+    jar -cvmf manifest.txt sitterInterface.jar *.class
+
+Then while still in the \classes directory,  proceed to execute the .jar via commandline:
+    java -jar sitterInterface.jar
+
+As per the onscreen instructions potential appointments should be entered in the form of:
+    start:am/pm:bedtime:end:am/pm for example  5:pm:8:11:pm
+
+    Windows of time that cover the alloted 5:00 PM to 4:00 AM window should return a success message with the
+     approriate fee for the entire time.
+
+     Appointments made for the dissallowed window of time should return a message stating the hours restriction.
+
+When testing of appointments is complete as per the on screen insctructions type "no" to exit.
+
+
+
